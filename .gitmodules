@@ -1,0 +1,29 @@
+[submodule "addons/godot-xr-tools"]
+	path = addons/godot-xr-tools
+	url = https://github.com/GodotVR/godot-xr-tools.git
+	branch = master
+
+[submodule "addons/godotopenxrvendors"]
+	path = addons/godotopenxrvendors
+	url = https://github.com/GodotVR/godot_openxr_vendors.git
+	branch = master
+
+[submodule "references/godot-xr-template"]
+	path = references/godot-xr-template
+	url = https://github.com/GodotVR/godot-xr-template.git
+	branch = main
+
+[submodule "references/flynn-demo"]
+	path = references/flynn-demo
+	url = https://github.com/BastiaanOlij/godot-xr-flynn-demo.git
+	branch = main
+
+[submodule "references/malcolm-demo"]
+	path = references/malcolm-demo
+	url = https://github.com/Malcolmnixon/godot-xr-tools-demo.git
+	branch = master
+
+[submodule "references/startup"]
+	path = references/startup
+	url = https://github.com/0SwiftKnightX/Startup.git
+	branch = main
