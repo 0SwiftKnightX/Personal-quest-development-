@@ -7,7 +7,7 @@ This is the single Godot project assembled from the linked XR reference projects
 - Godot 4.7
 - OpenXR
 - Godot XR Tools current master
-- OpenXR Vendors current master
+- OpenXR Vendors source preserved under references/openxr-vendors
 - Compatibility renderer
 - Meta Quest target
 
