@@ -8,7 +8,7 @@ Everything that belongs together moves together. Project settings are reconciled
 
 - Platform/runtime: root project.godot and OpenXR.
 - XR foundation: addons/godot-xr-tools.
-- Android/Quest vendor extensions: addons/godotopenxrvendors.
+- Android/Quest vendor source: references/openxr-vendors. Its packaged addon is not yet promoted into the active root.
 - Scene staging: XR Tools staging.
 - Interaction lab: scenes/xr_lab.tscn.
 
@@ -29,4 +29,4 @@ Godot 4 provides a command-line 3-to-4 conversion tool, but conversion can requi
 
 ## Current state
 
-The root project is the active unified project. The first integrated lab uses the current XR Tools foundation and is independent of the legacy/custom demo configurations.
+The root project is the active unified project. The vendor addon remains a staged source dependency until its packaged addon layout is promoted without changing resource paths. The first integrated lab uses the current XR Tools foundation and is independent of the legacy/custom demo configurations.
