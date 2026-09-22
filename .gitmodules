@@ -3,11 +3,6 @@
 	url = https://github.com/GodotVR/godot-xr-tools.git
 	branch = master
 
-[submodule "addons/godotopenxrvendors"]
-	path = addons/godotopenxrvendors
-	url = https://github.com/GodotVR/godot_openxr_vendors.git
-	branch = master
-
 [submodule "references/godot-xr-template"]
 	path = references/godot-xr-template
 	url = https://github.com/GodotVR/godot-xr-template.git
@@ -27,3 +22,8 @@
 	path = references/startup
 	url = https://github.com/0SwiftKnightX/Startup.git
 	branch = main
+
+[submodule "references/openxr-vendors"]
+	path = references/openxr-vendors
+	url = https://github.com/GodotVR/godot_openxr_vendors.git
+	branch = master
