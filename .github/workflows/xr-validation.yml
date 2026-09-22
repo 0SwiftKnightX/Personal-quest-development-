@@ -1,0 +1,46 @@
+name: XR Project Validation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  godot-parse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+
+      - name: Checkout active XR Tools dependency
+        run: git submodule update --init --depth 1 addons/godot-xr-tools
+
+      - name: Install Godot 4.7.2
+        shell: bash
+        run: |
+          set -euo pipefail
+          wget -q https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q Godot_v4.7.2-stable_linux.x86_64.zip
+          sudo mv Godot_v4.7.2-stable_linux.x86_64 /usr/local/bin/godot
+          godot --version
+
+      - name: Parse and import project
+        run: |
+          set -euo pipefail
+          godot --headless --path . --editor --quit --verbose
+
+      - name: Verify canonical project boundaries
+        run: |
+          set -euo pipefail
+          test -f project.godot
+          test -f scenes/main.tscn
+          test -f scenes/xr_lab.tscn
+          test -f addons/godot-xr-tools/plugin.cfg
+          grep -q 'run/main_scene="res://scenes/main.tscn"' project.godot
+          grep -q 'res://addons/godot-xr-tools/plugin.cfg' project.godot
+          test -f .gitmodules
